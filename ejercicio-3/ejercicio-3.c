@@ -4,7 +4,7 @@
 #include<unistd.h>
 
 int main(void){
-    int b[999] ,num0 = -1, num1 = -1, num10 = -1, num100 = -1;
+    int b[1000] ,num0 = -1, num1 = -1, num10 = -1, num100 = -1;
 
     float prom = 0;
     srand(getpid());
