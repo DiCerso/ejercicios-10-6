@@ -4,13 +4,13 @@
 #include<unistd.h>
 
 int main(void){
-    int b[99] ,max = 0 ,min = 20, repe[10], repetido = 0;
+    int b[99] ,max = 0 ,min = 20, repe[9], repetido = 0;
     for (int i = 0; i < 10; i++){
         repe[i] = 0;
     }
     float prom = 0;
     srand(getpid());
-    for (int i = 0; i < 99; i++){
+    for (int i = 0; i < 100; i++){
         b[i] = (rand()%11)+10;
         prom += b[i];
         if(b[i] > max){
