@@ -4,7 +4,7 @@
 #include<unistd.h>
 
 int main(void){
-    int b[99] ,max = 0 ,min = 20, repe[9], repetido = 0;
+    int b[100] ,max = 0 ,min = 20, repe[10], repetido = 0;
     for (int i = 0; i < 10; i++){
         repe[i] = 0;
     }
