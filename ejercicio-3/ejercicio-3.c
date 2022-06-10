@@ -8,7 +8,7 @@ int main(void){
 
     float prom = 0;
     srand(getpid());
-    for (int i = 0; i < 999; i++){
+    for (int i = 0; i < 1000; i++){
         b[i] = (rand()%101);
         if (b[i] == 0 && num0 == -1){
             num0 = i;
