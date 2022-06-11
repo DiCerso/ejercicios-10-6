@@ -4,28 +4,67 @@
 #include<unistd.h>
 
 int main(void){
-    int b[1000] ,num0 = -1, num1 = -1, num10 = -1, num100 = -1;
-
-    float prom = 0;
+    int b[1000], position[4];
     srand(getpid());
+    for(int i = 0; i < 4; i++){
+        position[i] = -10;
+    }
     for (int i = 0; i < 1000; i++){
-        b[i] = (rand()%101);
-        if (b[i] == 0 && num0 == -1){
-            num0 = i;
-        }else if (b[i] == 1 && num1 == -1){
-            num1 = i;
-        }else if (b[i] == 10 && num10 == -1){
-            num10 = i;
-        }else if (b[i] == 100 && num100 == -1){
-            num100 = i;
+        
+        b[i] = (rand()%101);              
+            switch(b[i]){
+            case 0:
+            for (int j = 0; j < 4; j++){ 
+                if(position[j] == 0){
+                    break;
+                }
+                if(position[j] == -10){
+                    position[j] = 0;
+                    break;
+                }
+                }
+            break;
+            case 1:
+                for (int j = 0; j < 4; j++){ 
+                if(position[j] == 1){
+                    break;
+                }
+                if(position[j] == -10){
+                    position[j] = 1;
+                    break;
+                }
+                }
+            break;
+            case 10:
+                for (int j = 0; j < 4; j++){ 
+                if(position[j] == 10){
+                    break;
+                }
+                if(position[j] == -10){
+                    position[j] = 10;
+                    break;
+                }
+                }
+            break;
+            case 100:
+                for (int j = 0; j < 4; j++){ 
+                if(position[j] == 100){
+                    break;
+                }
+                if(position[j] == -10){
+                    position[j] = 100;
+                    break;
+                }
+                }
+            break;
         }
     }
 
 
-    printf("el numero 0 se encontro en la posicion: %d\n", num0);
-    printf("el numero 1 se encontro en la posicion: %d\n", num1);
-    printf("el numero 10 se encontro en la posicion: %d\n", num10);
-    printf("el numero 100 se encontro en la posicion: %d\n", num100);
+    printf("El primer numero que se encontro fue: %d\n", position[0]);
+    printf("El segundo numero que se encontro fue: %d\n", position[1]);
+    printf("El tercer numero que se encontro fue: %d\n", position[2]);
+    printf("El cuarto numero que se encontro fue: %d\n", position[3]);
     
 
     return 0;
